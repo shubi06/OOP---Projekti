@@ -1,6 +1,6 @@
-package ProjektiOOP;
+package model.entities;
 
-class Patient extends Person {
+public class Patient extends Person {
     private int age;
 
     public Patient(int id, String name, String phone, String email, int age) {
@@ -16,17 +16,18 @@ class Patient extends Person {
         this.age = age;
     }
 
-    @Override
+
     public String getDetails() {
         return String.format("PACIENTI: ID=%d, Emri=%s, Telefoni=%s, Email=%s, Mosha=%d",
-                id, name, phone, email, age);
+            id, name, phone, email, age);
     }
 
     public String toFileString() {
         return id + "," + name + "," + phone + "," + email + "," + age;
     }
 
-    public static Patient fromFileString(String line) {
+
+     public static Patient fromFileString(String line) {
         String[] parts = line.split(",");
         return new Patient(
                 Integer.parseInt(parts[0]),

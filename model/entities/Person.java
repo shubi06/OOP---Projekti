@@ -1,17 +1,18 @@
-package ProjektiOOP;
+package model.entities;
 
 public abstract class Person {
-    protected int id;
+	protected int id;
     protected String name;
     protected String phone;
     protected String email;
 
-    public Person(int id, String name, String phone, String email) {
-        this.id = id;
+   public Person(int id, String name, String phone, String email) {
+        this.id =id;
         this.name = name;
         this.phone = phone;
         this.email = email;
     }
+
 
     public int getId() {
         return id;
@@ -40,6 +41,7 @@ public abstract class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     public abstract String getDetails();
 }

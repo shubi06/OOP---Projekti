@@ -1,7 +1,8 @@
-package ProjektiOOP;
+package model.entities;
 
-class Doctor extends Person {
+public class Doctor extends Person {
     private String specialty;
+    
 
     public Doctor(int id, String name, String phone, String email, String specialty) {
         super(id, name, phone, email);
